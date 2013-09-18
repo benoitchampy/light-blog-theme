@@ -1,0 +1,17 @@
+/*
+Theme Name: Light Blog Theme
+Theme URI: http://www.benoitchampy.net/
+Description: Light Blog Theme more on git 
+Version: 0.9
+Author: Benoît Champy
+Author URI: http://www.benoitchampy.net
+
+Tags: clean, basic, starter, foundation, light, blog
+
+The CSS and HTML are released under the GPL:
+http://www.opensource.org/licenses/gpl-3.0.html
+*/
+
+@import "css/foundation4.css";
+
+@import "css/main.css";

@@ -1,0 +1,91 @@
+html{
+	background: $backgroundColor;
+}
+body{
+	color: $mainColor;
+	background: $backgroundColor;
+	-webkit-font-smoothing: antialiased;
+
+}
+
+section{
+}
+
+article{
+	background: white;
+	margin-bottom: 20px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	a{
+		color: inherit;
+	}
+}
+
+h1, h1 a{
+	color: $strongColor !important;
+}
+
+.article-content{
+	padding: 3em 3.750em 3.750em 3.750em;
+	margin: 0 0 3.750em 0;
+	.article-title{
+		border-bottom: 1px solid #adadad;
+		margin-bottom: 1em;
+	}
+	h1{
+		margin-top: 0;
+	}
+}
+
+
+
+a.logo{
+	margin-top: 0.45em;
+	width: 60px;
+	height: 60px;
+	display: block;
+}
+
+.fixed{
+    position:fixed;
+
+}
+
+
+.sticky{
+    position:fixed;
+    z-index:999;
+}
+
+.search{
+	input{
+		font-size: 1.500em;
+		font-weight: 300;
+		background: none;
+		border: none;
+		@include box-shadow(none);
+		color: $mainColor;
+		-webkit-font-smoothing: antialiased;
+	}
+	input[type="text"]{
+		padding: 0;
+		width: 80%;
+		float: left;
+	}
+	input[type="submit"]{
+		width: 20%;
+		height: 2.3125em;
+		display: block;
+	}
+	input[type="text"]:focus{
+		padding: 0 0.5em;
+	}
+	form{
+		clear: both;
+	}
+}
+
+section a{
+	color: $accentColor;
+}
