@@ -89,3 +89,24 @@ a.logo{
 section a{
 	color: $accentColor;
 }
+
+blockquote{
+	padding: 0;
+	margin: 0;
+}
+blockquote p:first-letter {
+	float: left;
+	margin: .2em .3em .1em 0;
+	font-size: 220%;
+	font-weight: bold; }
+blockquote p:first-line {
+	font-variant: small-caps; }
+	
+a.more-link{
+	padding: 1em;
+	display: block;
+	text-align: center;
+	background: rgba($lightColor,0.1);
+	margin: 1em 4em;
+	color: $mainColor;
+}

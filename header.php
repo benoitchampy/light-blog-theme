@@ -17,7 +17,9 @@
 
 	<meta name="twitter:site" content="@BenoitChampy">
 
-
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory');?>/favicon.png" />
+	<link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_directory');?>/favicon.png" />
+	
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 	<?php wp_head(); ?>
 </head>

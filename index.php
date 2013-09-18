@@ -12,7 +12,7 @@
   	} ?>
   	</a>
 	<div class="article-content">
-	    <div class="article-title row">
+	    <div class="article-title">
 		    <?php the_author_post_rating(); ?>
 		    <h1>
 		      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -23,9 +23,7 @@
 	    </div>
 	    <?php //edit_post_link('Edit','','<strong>|</strong>'); ?>
 	    
-	    <span class="category"><?php the_category(', ') ?></span>
-	    <?php the_excerpt(); ?>
-	    <span class="tags"><?php the_tags( "#", " #", $after ); ?></span>
+	    <?php the_content('Lire l&rsquo;article…'); ?>
 	</div>
   </article>
 

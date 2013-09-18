@@ -203,3 +203,32 @@ a.logo {
 section a {
   color: #00b2ff;
 }
+
+/* line 93, ../sass/_layout.scss */
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 97, ../sass/_layout.scss */
+blockquote p:first-letter {
+  float: left;
+  margin: .2em .3em .1em 0;
+  font-size: 220%;
+  font-weight: bold;
+}
+
+/* line 102, ../sass/_layout.scss */
+blockquote p:first-line {
+  font-variant: small-caps;
+}
+
+/* line 105, ../sass/_layout.scss */
+a.more-link {
+  padding: 1em;
+  display: block;
+  text-align: center;
+  background: rgba(173, 173, 173, 0.1);
+  margin: 1em 4em;
+  color: #979797;
+}
