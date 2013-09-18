@@ -234,8 +234,17 @@ a.more-link {
 }
 
 /* line 114, ../sass/_layout.scss */
-.article-title .author-post-rating {
-  float: left;
+.author-post-rating {
   margin: 0 1em 0 0;
   height: 1.750em;
+}
+
+/* line 120, ../sass/_layout.scss */
+.clear {
+  clear: both;
+}
+
+/* line 125, ../sass/_layout.scss */
+.grid-item {
+  padding: 10px;
 }

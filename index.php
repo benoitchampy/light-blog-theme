@@ -13,10 +13,11 @@
   	</a>
 	<div class="article-content">
 	    <div class="article-title">
-		    <?php the_author_post_rating(); ?>
+		    
 		    <h1>
 		      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		    </h1>
+		    <?php the_author_post_rating(); ?>
 		    <?php 
 		    	if(function_exists('the_subtitle')) the_subtitle( '<h2 class="subtitle">', '</h2>');
 		    ?>
@@ -30,7 +31,9 @@
 
   <?php endwhile; wp_reset_query(); ?>
 
-	<div><?php next_posts_link( '<' ); ?> 	<?php previous_posts_link( '>' ); ?></div>
+<?php if ( $wp_query->max_num_pages > 1 ) : ?>
+    <?php next_posts_link( __( '<' ) ); ?> <?php previous_posts_link( __( '>' ) ); ?>
+<?php endif; ?>
 
 <?php else: ?>
   <h2>No posts found</h2>
