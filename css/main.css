@@ -232,3 +232,10 @@ a.more-link {
   margin: 1em 4em;
   color: #979797;
 }
+
+/* line 114, ../sass/_layout.scss */
+.article-title .author-post-rating {
+  float: left;
+  margin: 0 1em 0 0;
+  height: 1.750em;
+}
