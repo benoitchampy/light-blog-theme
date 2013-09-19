@@ -26,6 +26,7 @@
 
 <body <?php body_class(); ?>>
 	<div class="row">
+
 		<div class="large-1 column">
 
 		<a href="<?php echo home_url( '/' ); ?>" class="logo" >

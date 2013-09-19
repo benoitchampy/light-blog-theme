@@ -34,8 +34,8 @@
 		    ?>
 	    </div>
 	    <?php //edit_post_link('Edit','','<strong>|</strong>'); ?>
-	    
-	    <?php the_content('Lire l&rsquo;article…'); ?>
+	    <div class="show-for-small"><a class="more-link" href="<?php the_permalink(); ?>">…</a></div>
+	    <div class="hide-for-small"><?php the_content('…'); ?></div>
 	</div>
 	<?php } ?>
   </article>
@@ -44,7 +44,7 @@
   <?php endwhile; wp_reset_query(); ?>
 	<nav  class="posts-nav">
 		<?php if ( $wp_query->max_num_pages > 1 ) : ?>
-		    <?php next_posts_link( __( '<' ) ); ?> <?php previous_posts_link( __( '>' ) ); ?>
+		<?php posts_nav_link(' ', '&#9654;', '&#9664;'); ?>
 		<?php endif; ?>
 	</nav>
 <?php else: ?>

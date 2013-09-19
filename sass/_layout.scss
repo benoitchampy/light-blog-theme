@@ -71,6 +71,7 @@ a.logo{
 	width: 60px;
 	height: 60px;
 	display: block;
+	@include opacity(0.5);
 }
 
 .fixed{
@@ -165,11 +166,12 @@ a.more-link{
 	text-align: center;
 	a{
 		padding: 0 2em;
-		height: 60px;
 		line-height: 60px;
 		background: white;
 		display: block;
 		margin: 1.750em 0;
+		color: $mainColor;
+		font-size: 1.750em;
 	}
 }
 
@@ -183,4 +185,24 @@ a.more-link{
 			margin: 0;
 		}
 	}	
+}
+
+@media only screen and (max-width: 768px) {
+	.column, .columns{
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.article-content, .comments-content{
+		padding: 2em;
+	}
+	.article-content .article-title, .comments-content .article-title{
+		border-color: transparent;
+	}
+	a.logo{
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		z-index: 9999;
+		margin-top: 0;
+	}
 }

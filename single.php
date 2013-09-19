@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<?php //query_posts( 'posts_per_page=1' );?>
-
 <?php if ( have_posts() ): ?>
   <?php while ( have_posts() ) : the_post(); ?>
   <article class="main-article">
@@ -26,7 +24,9 @@
 
   </article>
   <nav class="posts-nav">
-  	<?php previous_post('%', '', 'yes'); ?> <?php next_post('%', '', 'yes'); ?>
+  	<?php previous_post_link('%link', '&#9664; %title', TRUE); ?>
+  	<?php next_post_link(' %link', '%title &#9654;', TRUE); ?>
+
   </nav>
 
   <?php endwhile; wp_reset_query(); ?>

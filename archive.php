@@ -55,7 +55,9 @@
 <?php endif; ?>
 
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
-    <?php next_posts_link( __( '<' ) ); ?> <?php previous_posts_link( __( '>' ) ); ?>
+	<nav class="posts-nav">
+	<?php posts_nav_link(' ', '&#9664;', '&#9654;'); ?>
+	</nav>
 <?php endif; ?>
 
 <?php get_sidebar(); ?>
