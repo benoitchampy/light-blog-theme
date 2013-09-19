@@ -44,7 +44,7 @@
 					<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('description'); ?></a>
 				</h2>
 			</header>
-			<nav>
+			<nav role="navigation">
 				
 				<?php 
 				  // Uncomment to show menu

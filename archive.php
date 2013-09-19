@@ -19,29 +19,39 @@
 */ ?>
 
 <?php if ( have_posts() ): ?>
-<ul class="large-block-grid-4 small-block-grid-2">
   <?php while ( have_posts() ) : the_post(); ?>
-    <li class="grid-item">
+	<article>
     <?php if ( in_category( 'reviews' )) { ?>
-	
-	   
-    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    <br/>
-    <?php the_author_post_rating(); ?>
-
+        <h1 class="review-content"><a href="<?php the_permalink(); ?>"><?php the_title(); ?> <br/><?php the_author_post_rating(); ?></a></h1>
     <?php
-    } else {?>
-    <h2>
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	</h2>
-    	<?php the_excerpt();
-    }
-    ?>
-    </li>
+    } else { ?>
+	  	<a href="<?php the_permalink(); ?>">
+	  		<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+		  the_post_thumbnail();
+	  	} ?>
+	  	</a>
+		<div class="article-content">
+		    <div class="article-title">
+			    
+			    <h1>
+			      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			    </h1>
+			    <?php the_author_post_rating(); ?>
+			    <?php 
+			    	if(function_exists('the_subtitle')) the_subtitle( '<h2 class="subtitle">', '</h2>');
+			    ?>
+		    </div>
+		    <?php //edit_post_link('Edit','','<strong>|</strong>'); ?>
+		    
+		    <?php the_content('Lire l&rsquo;article…'); ?>
+		</div>
+	<?php } ?>
+	</article>
+
   <?php endwhile; wp_reset_query(); ?>
+  </ul>
 <?php else: ?>
   <h2>No posts found</h2>
-</ul>
 <?php endif; ?>
 
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>

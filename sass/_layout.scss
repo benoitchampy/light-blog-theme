@@ -11,10 +11,7 @@ body{
 section{
 }
 
-article{
-	background: white;
-	margin-bottom: 20px;
-}
+
 
 h1,h2,h3,h4,h5,h6{
 	a{
@@ -26,9 +23,14 @@ h1, h1 a{
 	color: $strongColor !important;
 }
 
-.article-content{
+article{
+	background: white;
+	margin-bottom: 3em;
+}
+
+.article-content, .comments-content{
 	padding: 3em 3.750em 3.750em 3.750em;
-	margin: 0 0 3.750em 0;
+	//margin: 0 0 3.750em 0;
 	.article-title{
 		border-bottom: 1px solid #adadad;
 		margin-bottom: 1em;
@@ -38,7 +40,25 @@ h1, h1 a{
 	}
 }
 
+.review-content{
+	a{
+		padding: 1em 2.1em 1em 2.1em;
+		display: block;
+	}
+}
 
+.comments-content{
+	ul{
+		padding: 0;
+		li{
+			list-style: none;
+			ul{
+				padding: 1em;
+			}
+		}
+	}
+
+}
 
 a.logo{
 	margin-top: 0.45em;
@@ -124,4 +144,37 @@ a.more-link{
 
 .grid-item{
 	padding: 10px;
+}
+
+.row.review{
+	padding: 1em 0;
+	margin: 1em;
+	background: #fff;
+	.stars{
+		text-align: right;
+	}
+}
+
+.posts-nav{
+	text-align: center;
+	a{
+		padding: 0 2em;
+		height: 60px;
+		line-height: 60px;
+		background: white;
+		display: block;
+		margin: 1.750em 0;
+	}
+}
+
+
+
+// SINGLE
+.single{
+	.main-article{
+		margin-bottom: 0;
+		.article-content{
+			margin: 0;
+		}
+	}	
 }

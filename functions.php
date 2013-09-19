@@ -31,6 +31,14 @@ function remove_more_link_scroll( $link ) {
 	return $link;
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="styled-nav-button"';
+}
+
     
 add_action('init', 'my_init_method');
 ?>

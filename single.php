@@ -4,7 +4,7 @@
 
 <?php if ( have_posts() ): ?>
   <?php while ( have_posts() ) : the_post(); ?>
-  <article>
+  <article class="main-article">
   	<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	  the_post_thumbnail();
   	} ?>
@@ -17,21 +17,23 @@
 	    <?php 
 	    	if(function_exists('the_subtitle')) the_subtitle( '<h2 class="subtitle">', '</h2>');
 	    ?>
+	    <?php /*
 	    <?php edit_post_link('Edit','','<strong>|</strong>'); ?>
-	    
-	    <span class="category"><?php the_category(', ') ?></span>
+	    <span class="category"><?php the_category(', ') ?></span> */ ?>
 	    <?php the_content(); ?>
 	    <span class="tags"><?php the_tags( "#", " #", $after ); ?></span>
 	</div>
 
   </article>
-  <?php previous_post('< %', '', 'yes'); ?> 
-  |
-  <?php next_post('% > ', '', 'yes'); ?>
+  <nav class="posts-nav">
+  	<?php previous_post('%', '', 'yes'); ?> <?php next_post('%', '', 'yes'); ?>
+  </nav>
 
   <?php endwhile; wp_reset_query(); ?>
 <?php else: ?>
-  <h2>No posts found</h2>
+	<article>
+	  <h2>No posts found</h2>
+	</article>
 <?php endif; ?>
 
 

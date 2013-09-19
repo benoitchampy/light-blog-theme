@@ -116,38 +116,56 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 14, ../sass/_layout.scss */
-article {
-  background: white;
-  margin-bottom: 20px;
-}
-
-/* line 20, ../sass/_layout.scss */
+/* line 17, ../sass/_layout.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: inherit;
 }
 
-/* line 25, ../sass/_layout.scss */
+/* line 22, ../sass/_layout.scss */
 h1, h1 a {
   color: #646464 !important;
 }
 
-/* line 29, ../sass/_layout.scss */
-.article-content {
-  padding: 3em 3.750em 3.750em 3.750em;
-  margin: 0 0 3.750em 0;
+/* line 26, ../sass/_layout.scss */
+article {
+  background: white;
+  margin-bottom: 3em;
 }
-/* line 32, ../sass/_layout.scss */
-.article-content .article-title {
+
+/* line 31, ../sass/_layout.scss */
+.article-content, .comments-content {
+  padding: 3em 3.750em 3.750em 3.750em;
+}
+/* line 34, ../sass/_layout.scss */
+.article-content .article-title, .comments-content .article-title {
   border-bottom: 1px solid #adadad;
   margin-bottom: 1em;
 }
-/* line 36, ../sass/_layout.scss */
-.article-content h1 {
+/* line 38, ../sass/_layout.scss */
+.article-content h1, .comments-content h1 {
   margin-top: 0;
 }
 
-/* line 43, ../sass/_layout.scss */
+/* line 44, ../sass/_layout.scss */
+.review-content a {
+  padding: 1em 2.1em 1em 2.1em;
+  display: block;
+}
+
+/* line 51, ../sass/_layout.scss */
+.comments-content ul {
+  padding: 0;
+}
+/* line 53, ../sass/_layout.scss */
+.comments-content ul li {
+  list-style: none;
+}
+/* line 55, ../sass/_layout.scss */
+.comments-content ul li ul {
+  padding: 1em;
+}
+
+/* line 63, ../sass/_layout.scss */
 a.logo {
   margin-top: 0.45em;
   width: 60px;
@@ -155,18 +173,18 @@ a.logo {
   display: block;
 }
 
-/* line 50, ../sass/_layout.scss */
+/* line 70, ../sass/_layout.scss */
 .fixed {
   position: fixed;
 }
 
-/* line 56, ../sass/_layout.scss */
+/* line 76, ../sass/_layout.scss */
 .sticky {
   position: fixed;
   z-index: 999;
 }
 
-/* line 62, ../sass/_layout.scss */
+/* line 82, ../sass/_layout.scss */
 .search input {
   font-size: 1.500em;
   font-weight: 300;
@@ -178,39 +196,39 @@ a.logo {
   color: #979797;
   -webkit-font-smoothing: antialiased;
 }
-/* line 71, ../sass/_layout.scss */
+/* line 91, ../sass/_layout.scss */
 .search input[type="text"] {
   padding: 0;
   width: 80%;
   float: left;
 }
-/* line 76, ../sass/_layout.scss */
+/* line 96, ../sass/_layout.scss */
 .search input[type="submit"] {
   width: 20%;
   height: 2.3125em;
   display: block;
 }
-/* line 81, ../sass/_layout.scss */
+/* line 101, ../sass/_layout.scss */
 .search input[type="text"]:focus {
   padding: 0 0.5em;
 }
-/* line 84, ../sass/_layout.scss */
+/* line 104, ../sass/_layout.scss */
 .search form {
   clear: both;
 }
 
-/* line 89, ../sass/_layout.scss */
+/* line 109, ../sass/_layout.scss */
 section a {
   color: #00b2ff;
 }
 
-/* line 93, ../sass/_layout.scss */
+/* line 113, ../sass/_layout.scss */
 blockquote {
   padding: 0;
   margin: 0;
 }
 
-/* line 97, ../sass/_layout.scss */
+/* line 117, ../sass/_layout.scss */
 blockquote p:first-letter {
   float: left;
   margin: .2em .3em .1em 0;
@@ -218,12 +236,12 @@ blockquote p:first-letter {
   font-weight: bold;
 }
 
-/* line 102, ../sass/_layout.scss */
+/* line 122, ../sass/_layout.scss */
 blockquote p:first-line {
   font-variant: small-caps;
 }
 
-/* line 105, ../sass/_layout.scss */
+/* line 125, ../sass/_layout.scss */
 a.more-link {
   padding: 1em;
   display: block;
@@ -233,18 +251,52 @@ a.more-link {
   color: #979797;
 }
 
-/* line 114, ../sass/_layout.scss */
+/* line 134, ../sass/_layout.scss */
 .author-post-rating {
   margin: 0 1em 0 0;
   height: 1.750em;
 }
 
-/* line 120, ../sass/_layout.scss */
+/* line 140, ../sass/_layout.scss */
 .clear {
   clear: both;
 }
 
-/* line 125, ../sass/_layout.scss */
+/* line 145, ../sass/_layout.scss */
 .grid-item {
   padding: 10px;
+}
+
+/* line 149, ../sass/_layout.scss */
+.row.review {
+  padding: 1em 0;
+  margin: 1em;
+  background: #fff;
+}
+/* line 153, ../sass/_layout.scss */
+.row.review .stars {
+  text-align: right;
+}
+
+/* line 158, ../sass/_layout.scss */
+.posts-nav {
+  text-align: center;
+}
+/* line 160, ../sass/_layout.scss */
+.posts-nav a {
+  padding: 0 2em;
+  height: 60px;
+  line-height: 60px;
+  background: white;
+  display: block;
+  margin: 1.750em 0;
+}
+
+/* line 174, ../sass/_layout.scss */
+.single .main-article {
+  margin-bottom: 0;
+}
+/* line 176, ../sass/_layout.scss */
+.single .main-article .article-content {
+  margin: 0;
 }
