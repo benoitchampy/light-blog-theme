@@ -66,24 +66,49 @@ header{
 
 }
 
+// HEADER
+header{
+	width: 320px;
+	float: left;
+	position: fixed;
+	@include opacity(0.5);
+	@include transition-property(opacity);
+	@include transition-duration(1s); 
+ 
+	&:hover{
+		@include opacity(1);
+	}
+}
+
+.main-wrapper{
+	padding-left: 320px;
+}
+
+.main{
+	max-width: 49em;
+}
+
+.logo-container{
+	width: 60px;
+	float: left;
+	margin:0 20px;
+}
+
+
 a.logo{
-	margin-top: 1.4em;
+	margin-top: 1.5em;
 	width: 60px;
 	height: 60px;
 	display: block;
 	@include opacity(0.5);
 }
 
-.fixed{
-    position:fixed;
-
+.nav-container{
+	width: 220px;
+	float: right;
 }
 
 
-.sticky{
-    position:fixed;
-    z-index:999;
-}
 
 .search{
 	input{
@@ -187,6 +212,8 @@ a.more-link{
 	}	
 }
 
+
+
 @media only screen and (max-width: 768px) {
 	.column, .columns{
 		padding-right: 0;
@@ -205,4 +232,9 @@ a.more-link{
 		z-index: 9999;
 		margin-top: 0;
 	}
+	.main-wrapper{
+		padding-left: 0;
+	}
 }
+
+

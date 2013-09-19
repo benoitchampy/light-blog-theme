@@ -25,26 +25,28 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="row">
-
-		<div class="large-1 column">
-
-		<a href="<?php echo home_url( '/' ); ?>" class="logo" >
+	<div class="mobile-nav show-for-medium-down hide-for-medium-up">
+		<div class="logo-container">
+			<a href="<?php echo home_url( '/' ); ?>" class="logo" >
 		      <img src="<?php bloginfo('template_directory');?>/imgs/bc-logo.png" width="60" height="60" alt="BC" />
-		</a>
+		    </a>
 		</div>
-		<div class="large-3 columns hide-for-small">
-			<div>
-
-			<header>
-
-				<h1>
-					<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('name'); ?></a>
-				</h1>
-				<h2>
-					<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('description'); ?></a>
-				</h2>
-			</header>
+	</div>
+	
+	<header class="hide-for-medium-down show-for-medium-up">
+		<div class="logo-container">
+			<a href="<?php echo home_url( '/' ); ?>" class="logo" >
+		      <img src="<?php bloginfo('template_directory');?>/imgs/bc-logo.png" width="60" height="60" alt="BC" />
+		    </a>
+		</div>
+		<div class="nav-container">
+			<h1>
+				<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('name'); ?></a>
+			</h1>
+			<h2>
+				<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('description'); ?></a>
+			</h2>
+	
 			<nav role="navigation">
 				
 				<?php 
@@ -53,7 +55,10 @@
 				?>
 				<?php get_sidebar(); ?>
 			</nav>
-			</div>
 		</div>
-		<div class="large-8 columns">
-			<section>
+	</header>
+
+	<div class="main-wrapper">
+		<div id="main" role="main" class="row main">
+			<div class="large-12 columns">
+				<section>
