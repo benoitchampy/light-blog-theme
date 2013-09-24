@@ -45,6 +45,12 @@ header{
 	}
 }
 
+.article-content{
+	p:first-child {
+		//color: $boldColor;
+	}
+}
+
 nav{
 	h4{
 		font-size: 1.500em; //24px

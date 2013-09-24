@@ -26,7 +26,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="mobile-nav show-for-medium-down hide-for-medium-up">
+	<div class="mobile-nav">
 		<div class="logo-container">
 			<a href="<?php echo home_url( '/' ); ?>" class="logo" >
 		      <img src="<?php bloginfo('template_directory');?>/imgs/bc-logo.png" width="60" height="60" alt="BC" />
@@ -34,7 +34,7 @@
 		</div>
 	</div>
 	
-	<header class="hide-for-medium-down show-for-medium-up">
+	<header class="show-for-medium-up">
 		<div class="logo-container">
 			<a href="<?php echo home_url( '/' ); ?>" class="logo" >
 		      <img src="<?php bloginfo('template_directory');?>/imgs/bc-logo.png" width="60" height="60" alt="BC" />
@@ -54,7 +54,7 @@
 				  // Uncomment to show menu
 				  wp_nav_menu( array( 'menu' => 'Main' ) );
 				?>
-				<?php get_sidebar(); ?>
+				<?php //get_sidebar(); ?>
 			</nav>
 		</div>
 	</header>

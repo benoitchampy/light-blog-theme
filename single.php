@@ -7,10 +7,11 @@
 	  the_post_thumbnail();
   	} ?>
 	<div class="article-content">
-	    <h1>
-	      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	    </h1>
-
+		<div class="article-title">
+		    <h1>
+		      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		    </h1>
+		</div>
 
 	    <?php 
 	    	if(function_exists('the_subtitle')) the_subtitle( '<h2 class="subtitle">', '</h2>');

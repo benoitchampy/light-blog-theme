@@ -46,13 +46,19 @@ header{
 	}
 }
 
-.review-content{
-	a{
-		padding: 1em 2.1em 1em 2.1em;
-		display: block;
+// COMMENTS
+.comments{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	h3{
+		margin-top: 0;
 	}
 }
-
+.comment-form{
+	h3{
+		margin-top: 0;
+	}
+}
 .comments-content{
 	ul{
 		padding: 0;
@@ -65,6 +71,14 @@ header{
 	}
 
 }
+
+.review-content{
+	a{
+		padding: 1em 2.1em 1em 2.1em;
+		display: block;
+	}
+}
+
 
 // HEADER
 header{
@@ -109,6 +123,10 @@ a.logo{
 }
 
 
+.mobile-nav{
+	display: none;
+}
+
 
 .search{
 	input{
@@ -142,17 +160,22 @@ section a{
 	color: $accentColor;
 }
 
+// Quotes
+
 blockquote{
-	padding: 0;
+	padding: 0 0 0 1em;
 	margin: 0;
+	border-left: 1px solid $lightColor;
 }
 blockquote p:first-letter {
-	float: left;
-	margin: .2em .3em .1em 0;
-	font-size: 220%;
-	font-weight: bold; }
+	//float: left;
+	//margin: .2em .3em .1em 0;
+	font-size: 130%;
+}
+
 blockquote p:first-line {
-	font-variant: small-caps; }
+	//font-variant: small-caps;
+}
 	
 a.more-link{
 	padding: 1em;
@@ -214,7 +237,7 @@ a.more-link{
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
 	.column, .columns{
 		padding-right: 0;
 		padding-left: 0;
@@ -227,13 +250,20 @@ a.more-link{
 	}
 	a.logo{
 		position: fixed;
-		top: 20px;
+		top: 24px;
 		left: 20px;
 		z-index: 9999;
 		margin-top: 0;
 	}
 	.main-wrapper{
 		padding-left: 0;
+	}
+	.mobile-nav{
+		display: block;
+	}
+	
+	header.show-for-medium-up{
+		display: none !important;
 	}
 }
 

@@ -1,11 +1,11 @@
 <section>
 
 		<?php if ( have_comments() ) : ?>
-		<article>		
+		<article class="comments">		
 			<div  class="comments-content">
-			  <h3>Comments</h3>
+			  <h3><?php _e('Do you have something to say?', 'light-blog-theme'); ?></h3>
 			  <ul>
-			  	<?php wp_list_comments( array( 'type'=>'comment' ) ); ?>
+			  	<?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
 			  </ul>
 			  <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			    <?php previous_comments_link( __( '&larr; Older Comments', 'twentyten' ) ); ?>
@@ -16,9 +16,9 @@
 		  
 		<?php else: ?>
 		  <?php if ( ! comments_open() ) : ?>
-			<article>
+			<article class="comments">
 				<div  class="comments-content">
-				    <p>Comments are closed.</p>
+				    <p><?php _e('Les commentaires sont fermés pour cet article', 'light-blog-theme'); ?></p>
 				</div>
 			</article>
 		  <?php endif; ?>
@@ -26,24 +26,24 @@
 		
 		<?php // Start Comment Form ?>
 		<?php if ('open' == $post->comment_status) : ?>
-		<article>
+		<article class="comment-form">
 			<div  class="comments-content">
-			  <h3>Add Comment</h3>
+			  <h3><?php _e('Donnez de la voix !', 'light-blog-theme'); ?></h3>
 			  <form  method="post" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php">
 			    <div>
-			      <label for="author">Name<?php if ($req) echo "*"; ?></label>
+			      <label for="author"><?php _e('Nom', 'light-blog-theme'); ?><?php if ($req) echo " * :"; ?></label>
 			      <input type="text" name="author" id="author" />
 			    </div>
 			    <div>
-			      <label for="email">Email<?php if ($req) echo "*"; ?></label>
+			      <label for="email"><?php _e('Email', 'light-blog-theme'); ?><?php if ($req) echo " *"; ?> <?php _e('(ne sera pas publié) :', 'light-blog-theme');?></label>
 			      <input type="text" name="email" id="email" />
 			    </div>
 			    <div>
-			      <label for="comment">Comment</label>
+			      <label for="comment"><?php _e('Commentaire :', 'light-blog-theme'); ?></label>
 			      <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
 			    </div>
 			    <div>
-			      <input type="submit" value="Submit" />
+			      <input type="submit" value="<?php _e('Partager', 'light-blog-theme'); ?>" />
 			      <?php comment_id_fields(); ?>
 			    </div>
 			    <?php do_action('comment_form', $post->ID); ?>
