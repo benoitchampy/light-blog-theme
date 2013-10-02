@@ -157,7 +157,16 @@ a.logo{
 }
 
 section a{
-	color: $accentColor;
+	//color: $accentColor;
+	//color: $strongColor;
+	//font-weight: 400;
+	color: $mainColor;
+	text-decoration: underline;
+}
+.article-title{
+	a{
+	text-decoration: none;
+	}
 }
 
 // Quotes
@@ -178,12 +187,15 @@ blockquote p:first-line {
 }
 	
 a.more-link{
-	padding: 1em;
-	display: block;
-	text-align: center;
-	background: rgba($lightColor,0.1);
-	margin: 1em 4em;
-	color: $mainColor;
+	padding: 1em 0;
+	//display: block;
+	width: auto;
+	text-align: left;
+	//background: rgba($lightColor,0.1);
+	margin: 1em 0em;
+	color: $accentColor;
+	font-size: 2em;
+	font-weight: 600;
 }
 
 .author-post-rating{

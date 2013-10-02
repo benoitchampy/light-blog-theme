@@ -74,7 +74,7 @@ nav .menu-item a {
 }
 /* line 72, ../sass/_typography.scss */
 nav .menu-item.current-menu-item a, nav .menu-item.current-post-ancestor a {
-  color: #878787;
+  color: #242424;
 }
 /* line 77, ../sass/_typography.scss */
 nav .menu-main_nav-container {
@@ -111,7 +111,7 @@ html {
 
 /* line 4, ../sass/_layout.scss */
 body {
-  color: #979797;
+  color: #888888;
   background: #f7f6f5;
   -webkit-font-smoothing: antialiased;
 }
@@ -123,7 +123,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 /* line 22, ../sass/_layout.scss */
 h1, h1 a {
-  color: #646464 !important;
+  color: #242424 !important;
 }
 
 /* line 26, ../sass/_layout.scss */
@@ -256,7 +256,7 @@ a.logo {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  color: #979797;
+  color: #888888;
   -webkit-font-smoothing: antialiased;
 }
 /* line 141, ../sass/_layout.scss */
@@ -282,100 +282,107 @@ a.logo {
 
 /* line 159, ../sass/_layout.scss */
 section a {
-  color: #00b2ff;
+  color: #888888;
+  text-decoration: underline;
 }
 
-/* line 165, ../sass/_layout.scss */
+/* line 167, ../sass/_layout.scss */
+.article-title a {
+  text-decoration: none;
+}
+
+/* line 174, ../sass/_layout.scss */
 blockquote {
   padding: 0 0 0 1em;
   margin: 0;
   border-left: 1px solid #adadad;
 }
 
-/* line 170, ../sass/_layout.scss */
+/* line 179, ../sass/_layout.scss */
 blockquote p:first-letter {
   font-size: 130%;
 }
 
-/* line 180, ../sass/_layout.scss */
+/* line 189, ../sass/_layout.scss */
 a.more-link {
-  padding: 1em;
-  display: block;
-  text-align: center;
-  background: rgba(173, 173, 173, 0.1);
-  margin: 1em 4em;
-  color: #979797;
+  padding: 1em 0;
+  width: auto;
+  text-align: left;
+  margin: 1em 0em;
+  color: #00b2ff;
+  font-size: 2em;
+  font-weight: 600;
 }
 
-/* line 189, ../sass/_layout.scss */
+/* line 201, ../sass/_layout.scss */
 .author-post-rating {
   margin: 0 1em 0 0;
   height: 1.750em;
 }
 
-/* line 195, ../sass/_layout.scss */
+/* line 207, ../sass/_layout.scss */
 .clear {
   clear: both;
 }
 
-/* line 200, ../sass/_layout.scss */
+/* line 212, ../sass/_layout.scss */
 .grid-item {
   padding: 10px;
 }
 
-/* line 204, ../sass/_layout.scss */
+/* line 216, ../sass/_layout.scss */
 .row.review {
   padding: 1em 0;
   margin: 1em;
   background: #fff;
 }
-/* line 208, ../sass/_layout.scss */
+/* line 220, ../sass/_layout.scss */
 .row.review .stars {
   text-align: right;
 }
 
-/* line 213, ../sass/_layout.scss */
+/* line 225, ../sass/_layout.scss */
 .posts-nav {
   text-align: center;
 }
-/* line 215, ../sass/_layout.scss */
+/* line 227, ../sass/_layout.scss */
 .posts-nav a {
   padding: 0 2em;
   line-height: 60px;
   background: white;
   display: block;
   margin: 1.750em 0;
-  color: #979797;
+  color: #888888;
   font-size: 1.750em;
 }
 
-/* line 230, ../sass/_layout.scss */
+/* line 242, ../sass/_layout.scss */
 .single .main-article {
   margin-bottom: 0;
 }
-/* line 232, ../sass/_layout.scss */
+/* line 244, ../sass/_layout.scss */
 .single .main-article .article-content {
   margin: 0;
 }
 
 @media only screen and (max-width: 769px) {
-  /* line 241, ../sass/_layout.scss */
+  /* line 253, ../sass/_layout.scss */
   .column, .columns {
     padding-right: 0;
     padding-left: 0;
   }
 
-  /* line 245, ../sass/_layout.scss */
+  /* line 257, ../sass/_layout.scss */
   .article-content, .comments-content {
     padding: 2em;
   }
 
-  /* line 248, ../sass/_layout.scss */
+  /* line 260, ../sass/_layout.scss */
   .article-content .article-title, .comments-content .article-title {
     border-color: transparent;
   }
 
-  /* line 251, ../sass/_layout.scss */
+  /* line 263, ../sass/_layout.scss */
   a.logo {
     position: fixed;
     top: 24px;
@@ -384,17 +391,17 @@ a.more-link {
     margin-top: 0;
   }
 
-  /* line 258, ../sass/_layout.scss */
+  /* line 270, ../sass/_layout.scss */
   .main-wrapper {
     padding-left: 0;
   }
 
-  /* line 261, ../sass/_layout.scss */
+  /* line 273, ../sass/_layout.scss */
   .mobile-nav {
     display: block;
   }
 
-  /* line 265, ../sass/_layout.scss */
+  /* line 277, ../sass/_layout.scss */
   header.show-for-medium-up {
     display: none !important;
   }
