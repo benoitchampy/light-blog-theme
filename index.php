@@ -34,8 +34,7 @@
 		    ?>
 	    </div>
 	    <?php //edit_post_link('Edit','','<strong>|</strong>'); ?>
-	    <div class="show-for-small"><a class="more-link" href="<?php the_permalink(); ?>">…</a></div>
-	    <div class="hide-for-small"><?php the_content('…'); ?></div>
+	    <div><?php the_content('…'); ?></div>
 	</div>
 	<?php } ?>
   </article>

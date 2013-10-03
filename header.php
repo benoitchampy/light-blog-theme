@@ -26,40 +26,41 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="mobile-nav">
-		<div class="logo-container">
-			<a href="<?php echo home_url( '/' ); ?>" class="logo" >
-		      <img src="<?php bloginfo('template_directory');?>/imgs/bc-logo.png" width="60" height="60" alt="BC" />
-		    </a>
+	<div id="page">
+		<div class="mobile-nav">
+			<div class="logo-container">
+				<a href="#" class="logo" >
+			      <img src="<?php bloginfo('template_directory');?>/imgs/bc-logo.png" width="60" height="60" alt="BC" />
+			    </a>
+			</div>
 		</div>
-	</div>
+		
+		<header>
+			<div class="logo-container">
+				<a href="<?php echo home_url( '/' ); ?>" class="logo" >
+			      <img src="<?php bloginfo('template_directory');?>/imgs/bc-logo.png" width="60" height="60" alt="BC" />
+			    </a>
+			</div>
+			<div class="nav-container">
+				<h1>
+					<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('name'); ?></a>
+				</h1>
+				<h2>
+					<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('description'); ?></a>
+				</h2>
+		
+				<nav role="navigation">
+					
+					<?php 
+					  // Uncomment to show menu
+					  wp_nav_menu( array( 'menu' => 'Main' ) );
+					?>
+					<?php //get_sidebar(); ?>
+				</nav>
+			</div>
+		</header>
 	
-	<header class="show-for-medium-up">
-		<div class="logo-container">
-			<a href="<?php echo home_url( '/' ); ?>" class="logo" >
-		      <img src="<?php bloginfo('template_directory');?>/imgs/bc-logo.png" width="60" height="60" alt="BC" />
-		    </a>
-		</div>
-		<div class="nav-container">
-			<h1>
-				<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('name'); ?></a>
-			</h1>
-			<h2>
-				<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('description'); ?></a>
-			</h2>
-	
-			<nav role="navigation">
-				
-				<?php 
-				  // Uncomment to show menu
-				  wp_nav_menu( array( 'menu' => 'Main' ) );
-				?>
-				<?php //get_sidebar(); ?>
-			</nav>
-		</div>
-	</header>
-
-	<div class="main-wrapper">
-		<div id="main" role="main" class="row main">
-			<div class="large-12 columns">
-				<section>
+		<div class="main-wrapper">
+			<div id="main" role="main" class="row main">
+				<div class="large-12 columns">
+					<section>
