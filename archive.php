@@ -43,7 +43,7 @@
 		    </div>
 		    <?php //edit_post_link('Edit','','<strong>|</strong>'); ?>
 		    
-		    <?php the_content('Lire l&rsquo;article…'); ?>
+		    <?php the_content('…'); ?>
 		</div>
 	<?php } ?>
 	</article>
@@ -60,5 +60,5 @@
 	</nav>
 <?php endif; ?>
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

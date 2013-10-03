@@ -35,10 +35,21 @@ header{
 }
 
 .custom-button {
-padding: 1em;
-background: #00b2ff;
-border: none;
-color: #fff;
+	padding: 1em;
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+	-webkit-font-smoothing: inherit;
+	
+	width: 100%;
+	display: block;
+	text-align: center;
+	background: $mainColor;
+	
+	&.accent{
+		background: $accentColor;
+	}
 
  // @include button( '1em, $accentColor, 0, false, false, false);
 }
@@ -46,12 +57,12 @@ color: #fff;
 .social-links{
 	a{
 		text-decoration: none;
-		display: block;
+		//display: block;
 		i{
 			font-size: 1.5em;
 			margin-right: 0.5em;
 			vertical-align: middle;
-			color: $accentColor;
+			color: $mainColor;
 		}
 		span{
 			text-decoration: underline;
@@ -118,9 +129,9 @@ header{
 	width: 320px;
 	float: left;
 	position: fixed;
-	@include opacity(0.5);
+	@include opacity(0.6);
 	@include transition-property(opacity);
-	@include transition-duration(1s); 
+	@include transition-duration(0.4s); 
  
 	&:hover{
 		@include opacity(1);
@@ -129,6 +140,7 @@ header{
 
 .main-wrapper{
 	padding-left: 320px;
+	background: $backgroundColor;
 }
 
 .main{
@@ -229,6 +241,7 @@ a.more-link{
 	color: $accentColor;
 	font-size: 2em;
 	font-weight: 600;
+	text-decoration: none;
 }
 
 .author-post-rating{
@@ -314,8 +327,9 @@ a.more-link{
 	.main-wrapper{
 		width: 100%;
 		margin: 0;
-		@include transition();
-		@include transition-duration(0.2s);
+		@include transition(margin);
+		@include transition-duration(0.6s);
+		
 	}
 	
 	
@@ -324,7 +338,9 @@ a.more-link{
 		height: 100;
 		overflow: hidden;
 			header{
-				display: none;
+				//display: none;
+
+				@include opacity(0);
 			}
 		&.active{
 			.main-wrapper{
@@ -332,6 +348,7 @@ a.more-link{
 			}
 			header{
 				display: block;
+				@include opacity(1);
 			}
 		}
 	}
